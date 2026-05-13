@@ -24,6 +24,33 @@
     </article>
 </main>
 <h1>My Blog</h1>
+<div class="posts">{{ posts }}</div>
+<div class="posts">
+    {% for post in posts %}
+
+
+    {{ post }}
+
+
+{% endfor %}
+
+</div>
+{% for post in posts %}
+
+
+    <div>
+
+
+     <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+
+
+</div>
+
+
+{% endfor %}
+
  <p>Це вже не просто строка, а HTML сторінка post_list_blog.</p>
 </body>
 </html>

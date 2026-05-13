@@ -15,6 +15,7 @@
 <main>
     <article>
         <p>Published: 07.05.2026</p>
+        <p>Published: {% now "d.m.Y" %}</p>
         <h2>My first post</h2>
         <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
             Donec id elit non mi porta gravida at eget metus.
@@ -22,6 +23,7 @@
             tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus</p>
         <p>Post content...</p>
     </article>
+    <hr>
 </main>
 <h1>My Blog</h1>
 <div class="posts">{{ posts }}</div>
@@ -33,26 +35,40 @@
 
 
 {% endfor %}
-
+<hr>
 </div>
 {% for post in posts %}
 
-
-    <div>
-
-
+<div>
      <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
-
-
 </div>
-
+<hr>
 
 {% endfor %}
 
  <p>Це вже не просто строка, а HTML сторінка post_list_blog.</p>
+<hr>
+
+<div>
+
+{% for post in posts %}
+    <article>
+        <p>{{ post.published_date|date:"d.m.Y H:i" }}</p>
+
+        <h2>{{ post.title }}</h2>
+
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+
+    <hr>
+
+{% empty %}
+    <p>No posts yet.</p>
+{% endfor %}
+
+</div>
+
 </body>
 </html>
-
-

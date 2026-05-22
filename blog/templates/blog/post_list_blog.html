@@ -3,14 +3,14 @@
 {% block content %}
 
 
-{% for post in posts %}
+<!--{% for post in posts %}-->
 
 
-{{ post }}
+<!--{{ post }}-->
 
 
-{% endfor %}
-<hr>
+<!--{% endfor %}-->
+<!--<hr>-->
 
 
 {% for post in posts %}
@@ -19,7 +19,7 @@
     <p>published: {{ post.published_date }}</p>
 
     <h1><a href="">{{ post.title }}</a></h1>
-    
+
     <h3><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
 
     <p>{{ post.text|linebreaksbr }}</p>
@@ -31,35 +31,35 @@
 <p>Це вже не просто строка, а HTML сторінка post_list_blog.</p>
 <hr>
 
-<div>
-    <!--    CSS -->
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
+<!--<div>-->
+<!--    &lt;!&ndash;    CSS &ndash;&gt;-->
+<!--    <div class="content container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-8">-->
 
-                {% for post in posts %}
-                <article>
-                    <div class="post">
-                        <div class="card mb-4 p-3">
-                            <small class="text-muted">{{ post.published_date|date:"d.m.Y H:i" }}</small>
+<!--                {% for post in posts %}-->
+<!--                <article>-->
+<!--                    <div class="post">-->
+<!--                        <div class="card mb-4 p-3">-->
+<!--                            <small class="text-muted">{{ post.published_date|date:"d.m.Y H:i" }}</small>-->
 
-                            <h2>{{ post.title }}</h2>
+<!--                            <h2>{{ post.title }}</h2>-->
 
-                            <p>{{ post.text|linebreaksbr }}</p>
-                        </div>
-                    </div>
-                </article>
+<!--                            <p>{{ post.text|linebreaksbr }}</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </article>-->
 
-                <hr>
+<!--                <hr>-->
 
-                {% empty %}
-                <p>No posts yet.</p>
-                {% endfor %}
-                {% endblock %}
-            </div>
-        </div>
-    </div>
-</div>
+<!--                {% empty %}-->
+<!--                <p>No posts yet.</p>-->
+<!--                {% endfor %}-->
+<!--                {% endblock %}-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 

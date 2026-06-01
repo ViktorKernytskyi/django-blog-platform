@@ -21,8 +21,8 @@
 
     {% endif %}
 
-<a class="d-flex justify-content-end" href="{% url 'post_edit' pk=post.pk %}">
-    <i class="bi bi-pencil"></i> 
+<a class="d-flex justify-content-end" href="{% url 'post_edit' pk=post.pk %}" title="Edit file">
+    <i class="bi bi-pencil"></i>
 </a>
     <h1>{{ post.title }}</h1>
 
